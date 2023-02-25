@@ -4,9 +4,9 @@ import java.io.IOExeption;
 import java.io.InputStreamReader;
 import java.util.Arraylist;
 
-
 public class Cube {
 
+	
 	String[][] cube = {
 		{
 		"r","r","r",
@@ -77,8 +77,8 @@ class edgedFace {
 			edge1[3] = 8;
 
 			edge2[0] = 4;
-			edge2[1] = 2;
-			edge2[2] = 5;
+			edge2[1] = 6;
+			edge2[2] = 7;
 			edge2[3] = 8;
 			
 			edge3[0] = 0;
@@ -87,9 +87,9 @@ class edgedFace {
 			edge3[3] = 6;
 
 			edge4[0] = 5;			
-			edge4[1] = 2;
-			edge4[2] = 5;
-			edge4[3] = 8;
+			edge4[1] = 0;
+			edge4[2] = 1;
+			edge4[3] = 2;
 				
 			break;
 			case 2:			
@@ -99,9 +99,9 @@ class edgedFace {
 			edge1[3] = 8;
 
 			edge2[0] = 4;
-			edge2[1] = 2;
-			edge2[2] = 5;
-			edge2[3] = 8;
+			edge2[1] = 0;
+			edge2[2] = 3;
+			edge2[3] = 6;
 			
 			edge3[0] = 1;
 			edge3[1] = 0;
@@ -109,9 +109,9 @@ class edgedFace {
 			edge3[3] = 6;
 
 			edge4[0] = 5;			
-			edge4[1] = 2;
-			edge4[2] = 5;
-			edge4[3] = 8;	
+			edge4[1] = 0;
+			edge4[2] = 3;
+			edge4[3] = 6;	
 
 			break;
 			case 3:
@@ -121,9 +121,9 @@ class edgedFace {
 			edge1[3] = 8;
 
 			edge2[0] = 4;
-			edge2[1] = 2;
-			edge2[2] = 5;
-			edge2[3] = 8;
+			edge2[1] = 0;
+			edge2[2] = 1;
+			edge2[3] = 2;
 			
 			edge3[0] = 2;
 			edge3[1] = 0;
@@ -131,52 +131,52 @@ class edgedFace {
 			edge3[3] = 6;
 
 			edge4[0] = 5;			
-			edge4[1] = 2;
-			edge4[2] = 5;
-			edge4[3] = 8;
+			edge4[1] = 0;
+			edge4[2] = 3;
+			edge4[3] = 6;
 				
 			break;
 			case 4:
 			edge1[0] = 2;
-			edge1[1] = 2;
-			edge1[2] = 5;
-			edge1[3] = 8;
+			edge1[1] = 0;
+			edge1[2] = 1;
+			edge1[3] = 2;
 
 			edge2[0] = 1;
-			edge2[1] = 2;
-			edge2[2] = 5;
-			edge2[3] = 8;
+			edge2[1] = 0;
+			edge2[2] = 1;
+			edge2[3] = 2;
 			
-			edge3[0] = 2;
-			edge3[1] = 0;
-			edge3[2] = 3;
-			edge3[3] = 6;
+			edge3[0] = 3;
+			edge3[1] = 2;
+			edge3[2] = 1;
+			edge3[3] = 0;
 
-			edge4[0] = 3;			
+			edge4[0] = 0;			
 			edge4[1] = 2;
-			edge4[2] = 5;
-			edge4[3] = 8;
+			edge4[2] = 1;
+			edge4[3] = 0;
 				
 			break;
 			case 5:
 			edge1[0] = 0;
-			edge1[1] = 2;
-			edge1[2] = 5;
+			edge1[1] = 6;
+			edge1[2] = 7;
 			edge1[3] = 8;
 
 			edge2[0] = 3;
-			edge2[1] = 2;
-			edge2[2] = 5;
+			edge2[1] = 6;
+			edge2[2] = 7;
 			edge2[3] = 8;
 			
 			edge3[0] = 2;
-			edge3[1] = 0;
-			edge3[2] = 3;
-			edge3[3] = 6;
+			edge3[1] = 6;
+			edge3[2] = 7;
+			edge3[3] = 8;
 
 			edge4[0] = 1;			
-			edge4[1] = 2;
-			edge4[2] = 5;
+			edge4[1] = 6;
+			edge4[2] = 7;
 			edge4[3] = 8;
 				
 			break;
@@ -275,13 +275,11 @@ switch (direction) {
 		
 
 	public static void main(final String[] args);
-	throw IOExeption 
+	throw IOExeption
 	{
 BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-
-		Cube RubiksCube = new Cube();
-
+Cube RubiksCube = new Cube();
 
 boolean argsCheck = false;
 
@@ -308,14 +306,62 @@ while (proceed){
 	}
 	switch(input){
 		case "u":
-
+		RubiksCube.turnFace(4, "c");
+		RubiksCube.showCube();
+		break;
+		case "d":
+		RubiksCube.turnFace(5, "c");
+		RubiksCube.showCube();
+		break;
+		case "l":
+		RubiksCube.turnFace(2, "c");
+		RubiksCube.showCube();
+		break;
+		case "r":
+		RubiksCube.turnFace(0, "c");
+		RubiksCube.showCube();
+		break;
+		case "f":
+		RubiksCube.turnFace(1, "c");
+		RubiksCube.showCube();
+		break;
+		case "b":
+		RubiksCube.turnFace(3, "c");
+		RubiksCube.showCube();
+		break;
+		case "u'":
+		RubiksCube.turnFace(4, "cc");
+		RubiksCube.showCube();
+		break;
+		case "d'":
+		RubiksCube.turnFace(5, "cc");
+		RubiksCube.showCube();
+		break;
+		case "l'":
+		RubiksCube.turnFace(2, "cc");
+		RubiksCube.showCube();
+		break;
+		case "r'":
+		RubiksCube.turnFace(0, "cc");
+		RubiksCube.showCube();
+		break;
+		case "f'":
+		RubiksCube.turnFace(1, "cc");
+		RubiksCube.showCube();
+		break;
+		case "b'":
+		RubiksCube.turnFace(3, "cc");
+		RubiksCube.showCube();
+		break;
+		case "s":
+		
+		break;
+		case "q":
+		proceed = false;
+		break;
+	
 	}
 }
-
-RubiksCube.turnFace(5, "c");
-RubiksCube.showCube();
-
-
 	}
 
 }
