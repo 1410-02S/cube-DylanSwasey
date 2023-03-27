@@ -4,6 +4,8 @@ import java.io.IOExeption;
 import java.io.InputStreamReader;
 import java.util.Arraylist;
 
+//Looks really good! Complete enough I would say and you obviously put a lot of effort into it so good job!
+
 public class Cube {
 
 	
